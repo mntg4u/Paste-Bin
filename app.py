@@ -25,18 +25,15 @@ HTML_TEMPLATE = """
         body {
             background-color: black;
             color: white;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: Arial, sans-serif;
             padding: 20px;
         }
         .code-container {
             background-color: #1e1e1e;
-            padding: 15px;
+            padding: 10px;
             border-radius: 5px;
             position: relative;
             overflow: auto;
-            font-size: 16px;
-            white-space: pre;
-            line-height: 1.5;
         }
         .copy-button {
             background-color: #007bff;
@@ -48,15 +45,6 @@ HTML_TEMPLATE = """
             top: 10px;
             right: 10px;
             cursor: pointer;
-        }
-        .keyword {
-            color: #569cd6; /* Color for keywords */
-        }
-        .string {
-            color: #ce9178; /* Color for strings */
-        }
-        .comment {
-            color: #6a9955; /* Color for comments */
         }
     </style>
 </head>
