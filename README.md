@@ -27,3 +27,14 @@ pip install -r requirements
 ```bash
 python3 app.py
 ```
+
+
+**Response**
+The API will return a JSON response containing the URL to access your paste and the raw content URL. For example:
+
+```json
+{
+    "url": "https://your-host-url/paste/<paste_id>",
+    "raw": "https://your-host-url/raw/<paste_id>"
+}
+```
