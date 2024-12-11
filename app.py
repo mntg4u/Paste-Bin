@@ -5,8 +5,7 @@ import json
 from pymongo import MongoClient
 
 MONGO_URL = "" # add your mongo db url
-
-WEBHOOK = "https://test-paste-j4wh.onrender.com" # Remove this url and add yours
+WEBHOOK = "http://localhost:1080" # Remove this url and add yours
 
 client = MongoClient(MONGO_URL)
 myre = client['horrid-paste']
