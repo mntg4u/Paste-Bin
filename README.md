@@ -21,3 +21,9 @@ MONGO_URL: Add your MongoDB connection string. You can get this from the MongoDB
 ```bash
 pip install -r requirements
 ```
+
+4. **Run the application:**
+
+```bash
+python3 app.py
+```
