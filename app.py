@@ -11,6 +11,7 @@ client = MongoClient(MONGO_URL)
 myre = client['horrid-paste']
 paste = myre['padtes_fck']
 
+
 app = web.Application()
 
 HTML_TEMPLATE = """
