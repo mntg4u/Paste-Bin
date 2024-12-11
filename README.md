@@ -4,7 +4,7 @@ Hey all! This is a simple Pastebin API that allows you to create and retrieve pa
 
 ## Setup Instructions
 
-1. **Clone the repository** (if applicable):
+1. **Clone the repository** (if terminal):
    ```
    git clone <your-repo-url>
    cd <your-repo-directory>
