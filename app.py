@@ -66,7 +66,7 @@ HTML_TEMPLATE = """
     
     <div class="code-container">
         <button class="copy-button" onclick="copyToClipboard()">Copy</button>
-        <pre><code>{{content | safe}}</code></pre>
+        <pre><code>{{kundi}}</code></pre>
     </div>
 
     <script>
@@ -97,7 +97,7 @@ async def get_paste(request):
     content = paste.find_one({"paste_id": paste_id})
     if content is None:
         return web.json_response({"error": "Paste not found"}, status=404)
-    return web.Response(text=HTML_TEMPLATE.replace("{{content | safe}}", content['andi']), content_type='text/html')
+    return web.Response(text=HTML_TEMPLATE.replace("{{kundi}}", content['andi']), content_type='text/html')
 
 async def get_raw_paste(request):
     paste_id = request.match_info['paste_id']
