@@ -5,10 +5,8 @@ import json
 import os
 from pymongo import MongoClient
 
-os.getenv("MONGO_URL")
-os.getenv("WEBHOOK")
-MONGO_URL = "" # add your mongo db url
-WEBHOOK = "" # Remove this url and add yours
+MONGO_URL = os.getenv("MONGO_URL")
+WEBHOOK = os.getenv("WEBHOOK")
 
 client = MongoClient(MONGO_URL)
 myre = client['horrid-paste']
