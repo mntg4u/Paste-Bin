@@ -11,7 +11,6 @@ client = MongoClient(MONGO_URL)
 myre = client['horrid-paste']
 paste = myre['padtes_fck']
 
-
 app = web.Application()
 
 HTML_TEMPLATE = """
@@ -23,38 +22,76 @@ HTML_TEMPLATE = """
     <title>Pastebin</title>
     <style>
         body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f4037, #99f2c8);
+            color: #f5f5f5;
+            font-family: 'Roboto', Arial, sans-serif;
             padding: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        h1 {
+            text-align: center;
+            color: #99f2c8;
         }
         .code-container {
-            background-color: #1e1e1e;
-            padding: 10px;
+            background: #333;
+            padding: 15px;
             border-radius: 5px;
             position: relative;
             overflow: auto;
         }
         .copy-button {
-            background-color: #007bff;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
             color: white;
             border: none;
             border-radius: 5px;
-            padding: 5px 10px;
+            padding: 10px 20px;
             position: absolute;
             top: 10px;
             right: 10px;
             cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .copy-button:hover {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #2575fc, #6a11cb);
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #f5f5f5;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>Your Paste</h1>
-    
-    <div class="code-container">
-        <button class="copy-button" onclick="copyToClipboard()">Copy</button>
-        <pre><code>{{kundi}}</code></pre>
+    <div class="container">
+        <h1>Your Paste</h1>
+        <div class="code-container">
+            <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+            <pre><code>{{kundi}}</code></pre>
+        </div>
     </div>
 
     <script>
