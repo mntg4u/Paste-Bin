@@ -2,8 +2,11 @@ from aiohttp import web
 from uuid import uuid4
 import re
 import json
+import os
 from pymongo import MongoClient
 
+os.getenv("MONGO_URL")
+os.getenv("WEBHOOK")
 MONGO_URL = "" # add your mongo db url
 WEBHOOK = "" # Remove this url and add yours
 
